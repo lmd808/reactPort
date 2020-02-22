@@ -1,0 +1,41 @@
+{
+	"name": "reactport",
+	"version": "1.0.0",
+	"description": "This is my portfolio",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js",
+		"client": "npm run start --prefix client",
+		"dev": "concurrently \"nodemon server.js\" \"npm run client\"",
+		"heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lmd808/reactPort.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"bcrypt-nodejs": "0.0.3",
+		"bcryptjs": "^2.4.3",
+		"bluebird": "^3.7.2",
+		"concurrently": "^5.0.2",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-favicon": "^2.0.1",
+		"if-env": "^1.0.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.8.9",
+		"nodemon": "^2.0.2",
+		"passport": "^0.4.1",
+		"passport-jwt": "^4.0.0"
+	},
+	"bugs": {
+		"url": "https://github.com/lmd808/reactPort/issues"
+	},
+	"homepage": "https://github.com/lmd808/reactPort#readme"
+}
